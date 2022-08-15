@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>The Audience Paths Component</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+
+</head>
+
+<body>
+  <!--------------Header-------------->
+  <section id="header">
+    <div class="header-container">
+      <div class="header supertitle">
+        <p>Lesson 2.6</p>
+      </div>
+      <h1>The Audience Paths Component</h1>
+      <div class="lesson-descritpion">
+        <p>
+          Send users down different journeys based on their attributes and
+          preferences using the audience paths component.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-------------LESSON CONTENT-------------->
+
+  <section class="lesson-content">
+    <!------------Video------------>
+    <div class="lesson-video">
+      <script src="https://fast.wistia.com/embed/medias/v0mthn5lkh.jsonp" async></script>
+      <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+      <div class="wistia_responsive_padding" style="padding: 56.25% 0 0 0; position: relative">
+        <div class="wistia_responsive_wrapper" style="
+              height: 100%;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 100%;
+            ">
+          <div class="wistia_embed wistia_async_v0mthn5lkh videoFoam=true"
+            style="height: 100%; position: relative; width: 100%">
+            <div class="wistia_swatch" style="
+                  height: 100%;
+                  left: 0;
+                  opacity: 0;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  transition: opacity 200ms;
+                  width: 100%;
+                ">
+              <img src="https://fast.wistia.com/embed/medias/v0mthn5lkh/swatch" style="
+                    filter: blur(5px);
+                    height: 100%;
+                    object-fit: contain;
+                    width: 100%;
+                  " alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------Key Takeaways-------->
+    <div class="lesson-content container">
+      <h2>Key Takeaways</h2>
+      <div>
+        <ol>
+          <li>
+            <h3>Audience Paths</h3>
+            With audience paths, you’ll send users down different journeys
+            based on their attributes and preferences. You’ll define up to 7
+            audience groups. “Everyone Else” is an additional fallback group
+            for any users who do not meet the criteria for the other
+            groupings.
+          </li>
+          <li>
+            <h3>Ranking</h3>
+            Audience paths rank your different groupings, so that if a user
+            falls into multiple audience groups, they’ll go down the path
+            designated as the highest priority.
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!--------Use Cases-------->
+    <div class="lesson-content container">
+      <h2>Component Use Cases</h2>
+
+      <!----Tab Modal---->
+      <div class="tabs-container">
+        <div class="tabs">
+          <button class="tabs links active" onclick="openCase(event, 'Use Case 1')">Use Case 1</button>
+          <button class="tabs links" onclick="openCase(event, 'Use Case 2')">Use Case 2</button>
+          <button class="tabs links" onclick="openCase(event, 'Use Case 3')">Use Case 3</button>
+        </div>
+
+        <div id="Use Case 1" class="tabs content" style="display: block">
+
+          <div class="use-case-text">
+            <p>
+              Tailor messages to users based on their country of residency.
+            </p>
+          </div>
+          <div class="use-case-img">
+            <img src="./assets/images/1.png" alt="The audience paths component in action" />
+            <figcaption>The Audience Paths component in action</figcaption>
+          </div>
+        </div>
+
+
+        <div id="Use Case 2" class="tabs content" style="display: none">
+
+          <div class="use-case-description">
+            <p>
+              Provide restaurant recommendations based on a user’s past
+              orders, using multiple audience paths to hone in on your user’s
+              favorite cuisine.
+            </p>
+          </div>
+          <div>
+            <img src="./assets/images/2.png" alt="Use case 2: The Audience Paths component in action" />
+            <figcaption>The Audience Paths component in action</figcaption>
+          </div>
+        </div>
+
+        <div id="Use Case 3" class="tabs content" style="display: none">
+
+          <div class="use-case-description">
+            <p>
+              Assign priority to messages targeting more granular user
+              preference data. For example, users who like a big brand’s shoes
+              will receive a message with shoe recommendations, while users
+              who have only expressed interest in the brand more generally
+              will receive recommendations for a mixture of products.
+            </p>
+          </div>
+
+          <img src="./assets/images/3.png" alt="Use Case 3: The Audience Paths component in action" />
+          <figcaption>The Audience Paths component in action</figcaption>
+        </div>
+      </div>
+    </div>
+    <!--------Knowledge Check-------->
+    <div class="lesson-content container">
+      <h2 id="quiz-name">Knowledge Check</h2>
+      <div class="quiz-container">
+        <p>Choose the best answer: If a user qualifies for every audience group in your audience paths component, they
+          will proceed down:</p>
+        <div class="answerChoices">
+          <div class="answer">
+            <input type="radio" id="answer1" name="answer" value="answer1" />
+            <label for="answer1">A random path.</label>
+            <span id="answer1Message" class="message incorrect"></span>
+          </div>
+
+          <div class="answer" id="correct">
+            <input type="radio" id="answer2" name="answer" value="answer2" />
+            <label for="answer2">The path of Audience Group 1, since this group is ranked highest.</label>
+            <span id="answer2Message" class="message correct"></span>
+
+          </div>
+
+          <div class="answer">
+            <input type="radio" id="answer3" name="answer" value="answer3" />
+            <label for="answer3">The “Everyone Else” path.</label>
+            <span id="answer3Message" class="message incorrect"></span>
+
+          </div>
+
+          <div class="answer">
+            <input type="radio" id="answer4" name="answer" value="answer4" />
+            <label for="answer4">The path with the most associated message components.
+            </label>
+            <span id="answer4Message" class="message incorrect"></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id=footer>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

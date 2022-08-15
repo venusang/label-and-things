@@ -1,0 +1,144 @@
+body {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto 100px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: "600px";
+  color: black;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+#header {
+  background-color: blueviolet;
+  width: 100%;
+}
+
+.header-container {
+  width: 80%;
+  background-color: blueviolet;
+  color: white;
+  margin: auto;
+  padding: 20px;
+}
+.header-container h1 {
+  color: white;
+}
+.header-container .supertitle {
+  font-weight: bold;
+}
+
+.lesson-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+.lesson-content.container {
+  display: inline-block;
+  width: 80%;
+  padding: 20px;
+  height: auto;
+}
+
+.lesson-video {
+  border: 1px solid lightgray;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 60px auto;
+}
+
+.tabs-container {
+  border: 1px solid gray;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.tabs {
+  border-bottom: 1px solid gray;
+  font: inherit;
+  overflow: hidden;
+  background-color: white;
+}
+.tabs button {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 16px;
+  width: 20%;
+  border-bottom: white;
+  z-index: 1;
+}
+.tabs button.active {
+  font-weight: bold;
+  border-bottom: 4px solid;
+  border-color: blueviolet;
+  background-color: #DA7BFF;
+}
+.tabs button:hover {
+  background-color: blueviolet;
+  border-bottom: 4px solid blueviolet;
+  color: white;
+}
+.tabs.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+  border: 0px 1px solid gray;
+  background-color: white;
+  height: auto;
+  display: inline-block;
+  padding: 30px;
+}
+.tabs .use-case-img, .tabs .use-case-text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.tabs img {
+  width: 60%;
+  height: auto;
+}
+
+.answer {
+  display: block;
+}
+.answer input:hover,
+.answer label:hover {
+  cursor: pointer;
+}
+
+.message {
+  display: inline;
+  margin-left: 1em;
+}
+.message.incorrect {
+  color: red;
+}
+.message.correct {
+  color: green;
+}
+
+.quiz-container {
+  box-shadow: 2px 2px 5px gray;
+  border: 1px solid gray;
+  padding: 20px;
+}
+.quiz-container p {
+  font-weight: bold;
+}
+.quiz-container .answer {
+  padding: 10px 0;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,159 @@
+body{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto 100px;
+    overflow-x: hidden;
+}
+
+//Headers
+h1, h2, h3{
+    font-weight: '600px';
+    color: black;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 1.75rem;
+}
+
+
+
+#header{
+    background-color: blueviolet;
+    width: 100%;
+}
+.header-container{
+    width:80%;
+    background-color: blueviolet ;
+    color: white;
+    margin:auto;
+    padding: 20px;
+
+    h1{
+        color: white;
+    }
+
+    .supertitle{
+        font-weight: bold;
+    }
+}
+//Lesson Content
+.lesson-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    //display: inline-block;
+
+    &.container{
+        display: inline-block;
+        width: 80%;
+        padding: 20px;
+        height: auto;
+        //margin: 10px auto;
+        //padding: 0 30px;
+    }
+}
+.lesson-video{
+    border: 1px solid lightgray;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    margin: 60px auto;
+}
+
+//Tab Modal
+.tabs-container{
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px gray;
+}
+.tabs{
+    border-bottom: 1px solid gray;
+    font: inherit;
+    overflow: hidden;
+    background-color: white;
+    
+
+    button{
+        background-color: inherit;
+        float: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 16px;
+        width: 20%;
+        border-bottom: white;
+        z-index: 1;
+    }
+    button.active{
+        font-weight: bold;
+        border-bottom: 4px solid;
+        border-color: blueviolet;
+        background-color:#DA7BFF;
+    }
+
+    button:hover{
+        background-color: blueviolet;
+        border-bottom: 4px solid blueviolet;
+        color: white;
+    }
+
+    //Can't seem to get content in box to flex (I want description on left and image with caption on right
+    &.content{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 50px;
+
+        border: 0px 1px solid gray;
+        background-color: white;
+        height:auto;
+        display: inline-block;
+        padding: 30px;
+    }
+    .use-case-img, .use-case-text{
+        width: fit-content;        
+    }
+    img{
+        width: 60%;
+        height: auto;
+    }
+
+    
+}
+
+//Static Quiz
+.answer{
+    display:block;
+    input:hover,
+    label:hover {
+    cursor: pointer;
+    }
+}
+
+//I want entire label to turn green/red as well
+.message {
+    display: inline;
+    margin-left: 1em;
+
+    &.incorrect {
+        color:red;
+    }
+    &.correct {
+        color:green;
+    }
+}
+.quiz-container{
+    box-shadow: 2px 2px 5px gray;
+    border: 1px solid gray;
+    padding: 20px;
+    p{
+        font-weight: bold;
+    }
+    .answer{
+        padding: 10px 0;
+    }
+
+}
