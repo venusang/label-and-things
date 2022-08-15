@@ -137,12 +137,21 @@ h2 {
 
 //Static Quiz
 .answer {
+    margin-bottom: 1rem;
+
     label {
         padding: 0 0.5rem
     }
 
-    margin-bottom: 1rem &:hover {
-        border: 1px solid #ccc;
+    .message {
+        display: none;
+        text-indent: 2.75rem;
+        font-style: italic;
+        font-size: 0.85rem;
+    }
+
+    &:hover {
+        border: 1px solid blueviolet;
         border-radius: 5px;
     }
 
@@ -157,11 +166,8 @@ h2 {
 
     &.selected {
         border-radius: 5px;
-        border: 1px solid blueviolet;
 
         &.incorrect {
-            // border: 1px solid red;
-
             .message {
                 color: red;
                 display: block;
@@ -170,8 +176,6 @@ h2 {
         }
 
         &.correct {
-            // border: 1px solid green;
-
             .message {
                 color: green;
                 display: block;
@@ -181,11 +185,7 @@ h2 {
     }
 }
 
-//I want entire label to turn green/red as well
-.message {
-    display: none;
-    text-indent: 2.95rem
-}
+
 
 .quiz-container {
     box-shadow: 2px 2px 5px gray;
