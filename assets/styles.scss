@@ -1,4 +1,4 @@
-body{
+body {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
     margin: 0 auto 100px;
@@ -6,48 +6,53 @@ body{
 }
 
 //Headers
-h1, h2, h3{
+h1,
+h2,
+h3 {
     font-weight: '600px';
     color: black;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
 }
-h2{
+
+h2 {
     font-size: 1.75rem;
 }
 
 
 
-#header{
+#header {
     background-color: blueviolet;
     width: 100%;
 }
-.header-container{
-    width:80%;
-    background-color: blueviolet ;
+
+.header-container {
+    width: 80%;
+    background-color: blueviolet;
     color: white;
-    margin:auto;
+    margin: auto;
     padding: 20px;
 
-    h1{
+    h1 {
         color: white;
     }
 
-    .supertitle{
+    .supertitle {
         font-weight: bold;
     }
 }
+
 //Lesson Content
-.lesson-content{
+.lesson-content {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: auto;
     //display: inline-block;
 
-    &.container{
+    &.container {
         display: inline-block;
         width: 80%;
         padding: 20px;
@@ -56,7 +61,8 @@ h2{
         //padding: 0 30px;
     }
 }
-.lesson-video{
+
+.lesson-video {
     border: 1px solid lightgray;
     max-width: 800px;
     width: 100%;
@@ -65,18 +71,19 @@ h2{
 }
 
 //Tab Modal
-.tabs-container{
+.tabs-container {
     border: 1px solid gray;
     box-shadow: 2px 2px 5px gray;
 }
-.tabs{
+
+.tabs {
     border-bottom: 1px solid gray;
     font: inherit;
     overflow: hidden;
     background-color: white;
-    
 
-    button{
+
+    button {
         background-color: inherit;
         float: center;
         border: none;
@@ -87,21 +94,22 @@ h2{
         border-bottom: white;
         z-index: 1;
     }
-    button.active{
+
+    button.active {
         font-weight: bold;
         border-bottom: 4px solid;
         border-color: blueviolet;
-        background-color:#DA7BFF;
+        background-color: #DA7BFF;
     }
 
-    button:hover{
+    button:hover {
         background-color: blueviolet;
         border-bottom: 4px solid blueviolet;
         color: white;
     }
 
     //Can't seem to get content in box to flex (I want description on left and image with caption on right
-    &.content{
+    &.content {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -109,50 +117,82 @@ h2{
 
         border: 0px 1px solid gray;
         background-color: white;
-        height:auto;
+        height: auto;
         display: inline-block;
         padding: 30px;
     }
-    .use-case-img, .use-case-text{
-        width: fit-content;        
+
+    .use-case-img,
+    .use-case-text {
+        width: fit-content;
     }
-    img{
+
+    img {
         width: 60%;
         height: auto;
     }
 
-    
+
 }
 
 //Static Quiz
-.answer{
-    display:block;
+.answer {
+    display: block;
+
     input:hover,
     label:hover {
-    cursor: pointer;
+        cursor: pointer;
+    }
+
+    &.selected {
+        &.incorrect {
+            label {
+                border: 1px solid red;
+            }
+
+            .message {
+                color: red;
+            }
+
+        }
+
+        &.correct {
+            label {
+                border: 1px solid green;
+            }
+
+            .message {
+                color: red;
+            }
+
+        }
     }
 }
 
 //I want entire label to turn green/red as well
 .message {
-    display: inline;
+    display: none;
     margin-left: 1em;
 
     &.incorrect {
-        color:red;
+        color: red;
     }
+
     &.correct {
-        color:green;
+        color: green;
     }
 }
-.quiz-container{
+
+.quiz-container {
     box-shadow: 2px 2px 5px gray;
     border: 1px solid gray;
     padding: 20px;
-    p{
+
+    p {
         font-weight: bold;
     }
-    .answer{
+
+    .answer {
         padding: 10px 0;
     }
 

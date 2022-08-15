@@ -5,7 +5,9 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: "600px";
   color: black;
 }
@@ -30,9 +32,11 @@ h2 {
   margin: auto;
   padding: 20px;
 }
+
 .header-container h1 {
   color: white;
 }
+
 .header-container .supertitle {
   font-weight: bold;
 }
@@ -43,6 +47,7 @@ h2 {
   width: 100%;
   margin: auto;
 }
+
 .lesson-content.container {
   display: inline-block;
   width: 80%;
@@ -69,6 +74,7 @@ h2 {
   overflow: hidden;
   background-color: white;
 }
+
 .tabs button {
   background-color: inherit;
   float: center;
@@ -80,17 +86,20 @@ h2 {
   border-bottom: white;
   z-index: 1;
 }
+
 .tabs button.active {
   font-weight: bold;
   border-bottom: 4px solid;
   border-color: blueviolet;
   background-color: #DA7BFF;
 }
+
 .tabs button:hover {
   background-color: blueviolet;
   border-bottom: 4px solid blueviolet;
   color: white;
 }
+
 .tabs.content {
   display: flex;
   flex-direction: row;
@@ -102,11 +111,14 @@ h2 {
   display: inline-block;
   padding: 30px;
 }
-.tabs .use-case-img, .tabs .use-case-text {
+
+.tabs .use-case-img,
+.tabs .use-case-text {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
+
 .tabs img {
   width: 60%;
   height: auto;
@@ -115,20 +127,32 @@ h2 {
 .answer {
   display: block;
 }
+
 .answer input:hover,
 .answer label:hover {
   cursor: pointer;
 }
 
-.message {
-  display: inline;
-  margin-left: 1em;
+.answer.selected.correct label {
+  border: 1px solid green;
 }
-.message.incorrect {
+
+.answer.selected.incorrect label {
+  border: 1px solid red;
+}
+
+.answer.selected.correct .message {
+  display: block;
+  color: green;
+}
+
+.answer.selected.incorrect .message {
+  display: block;
   color: red;
 }
-.message.correct {
-  color: green;
+
+.answer.message {
+  display: none;
 }
 
 .quiz-container {
@@ -136,9 +160,13 @@ h2 {
   border: 1px solid gray;
   padding: 20px;
 }
+
 .quiz-container p {
   font-weight: bold;
 }
+
 .quiz-container .answer {
   padding: 10px 0;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
